@@ -53,8 +53,8 @@ class ApiController{
       case'getFreeProjects':
         $data = $this->getFreeProjects($request);
         break;
-      case'getProjectsforPerson':
-        $data = $this->getProjectsforPerson($request);
+      case'getProjectsForPerson':
+        $data = $this->getProjectsForPerson($request);
         break;
       default:
         $this->error('wrong_request_type:' . $requestType);
@@ -115,12 +115,22 @@ class ApiController{
     return $data;
   }
 
-  private function getProjectsforPerson($request){
+  private function getProjectsForPerson($request){
 
-    $user =  4948;
+    $this->getUserLdap($request['person']);
+
+    $user =   $this->getUserLdap($request['person']);
+
+    if(!$user){
+      $this->error[] = 'not found';
+      return false;
+    }
+
+
 
     $connector = new AISConnect();
-    $html = $connector->request('http://is.stuba.sk/lide/clovek.pl?lang=sk;zalozka=5;rok=1;id='.$user );
+    $html = $connector->request('http://is.stuba.sk/lide/clovek.pl?lang=sk;zalozka=5;rok=1;id=' . $user );
+    var_dump('http://is.stuba.sk/lide/clovek.pl?lang=sk;zalozka=5;rok=1;id=' . $user);
     $html = trim(preg_replace('/\s\s+/', ' ', $html));
 
 
@@ -129,11 +139,20 @@ class ApiController{
     $doc->loadHTML($html);
     $xPath = new \DOMXPath($doc);
 
-    $formTable = $xPath->query("(//div[@class='mainpage'])/table");
-
-    var_dump($formTable->item(0));
+    $formTable = $xPath->query("(//div[@class='mainpage'])/table[3]/tbody/tr");
 
 
+    $data = [];
+    foreach($formTable as $row){
+      foreach($row->childNodes as $td){
+        var_dump($td->nodeValue);
+
+      }
+      die;
+    }
+
+
+    return $data;
 
   }
 
@@ -149,13 +168,48 @@ class ApiController{
     $doc->loadHTML($html);
     $xPath = new \DOMXPath($doc);
 
-    $formTable = $xPath->query("(//div[@class='mainpage'])/table");
+    $formTable = $xPath->query("(//div[@class='mainpage'])/table/tbody/tr");
 
 
-    return $doc->saveHTML($formTable[0]);
+    $data = [];
+    foreach($formTable as $row){
+      $data[] = (object)[
+        'name' => $row->childNodes[0]->nodeValue,
+        'val' => isset($row->childNodes[1]->nodeValue)?$row->childNodes[1]->nodeValue:'',
+      ];
+    }
+
+
+    return $data;
 
   }
 
+
+  private function getUserLdap($user){
+    $ds=ldap_connect("ldap.stuba.sk");
+    ldap_set_option($ds, LDAP_OPT_PROTOCOL_VERSION, 3);
+    if(!$ds){
+      $this->error[] = 'LDAP conn failed';
+      return;
+    }
+
+    $ldap_dn = 'ou=People, DC=stuba, DC=sk';
+    $ldap = ldap_bind($ds);
+
+    if (!$ldap) {
+      $this->error[] = 'Auth Fail';
+      return;
+    }
+
+    $rs = ldap_search($ds, $ldap_dn, "uid=" . $user, array( 'uid' ,"uisid"));
+    $user  = ldap_get_entries($ds, $rs);
+//    $rs = ldap_search($ds, $ldap_dn, "uisid=" . $user, array( 'uid' ,"uisid"));
+//    $user  = ldap_get_entries($ds, $rs);
+//    var_dump($user);
+    @$user = $user[0]['uisid'][0];
+    return $user;
+
+  }
 
 
   /**

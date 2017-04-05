@@ -7,8 +7,12 @@ class App extends React.Component {
   constructor(props) {
     var state = {
       dept:642,
+      view:'projects',
       projects:[],
       focusedProjectData : false,
+
+      userName:'',
+      userData:[],
     };
     super(props);
     this.state = state;
@@ -53,10 +57,44 @@ class App extends React.Component {
           .then(function(json){
             let state  = this.state;
             state.focusedProjectData = json.data;
+            state.view = 'projectsFocused',
             this.setState(state);
           }.bind(this))
       }.bind(this));
 
+  }
+
+  navHome(){
+    let state  = this.state;
+    state.view = 'projects';
+    this.setState(state);
+  }
+
+  setView(view){
+    let state  = this.state;
+    state.view = view;
+    this.setState(state);
+  }
+
+  setUserName(e){
+    let state  = this.state;
+    state.userName = e.target.value;
+    this.setState(state);
+  }
+
+  fetchUser(){
+    fetch("api/?request=getProjectsForPerson&person=" + this.state.userName,{
+      method: "GET",
+    })
+      .then(function(response) {
+        return response.json()
+          .then(function(json){
+            let state  = this.state;
+            state.userData = json.data;
+            //state.view = 'projectsFocused',
+              this.setState(state);
+          }.bind(this))
+      }.bind(this));
   }
 
 
@@ -84,16 +122,45 @@ class App extends React.Component {
       projects[i].name = <a onClick={() => {this.showItem(link)}}>{projects[i].name}</a>;
     }
 
+    let viewData = '';
+    switch(this.state.view) {
+      case "projects" :
+        viewData = (
+          <div>
+            <select onChange={(e)=>{this.selectDept(e)}}>{items}</select>
+            <Table className="table table-striped table-bordered"
+                   data={projects}
+                   sortable={true}
+                   filterable={['name','lead']}
+            ></Table>
+          </div>);
+      break;
+      case'projectsFocused':
+        viewData=(
+          <div>
+            <button className="btn-danger btn" onClick={()=>{this.navHome()}}>Back</button>
+            <Table className="table table-striped table-bordered"
+                   data={this.state.focusedProjectData} ></Table>
+          </div>);
+        break
+
+      case 'users':
+        viewData=(
+          <div>
+            <input type="text" value={this.state.userName} onChange={(e)=>this.setUserName(e)}/>
+            <button className="btn" onClick={()=>this.fetchUser()} >Search</button>
+            <Table className="table table-striped table-bordered"
+                   data={this.state.focusedProjectData} ></Table>
+          </div>);
+        break;
+    }
+
+
     return (
-      <div className="">
-        <select onChange={(e)=>{this.selectDept(e)}}>{items}</select>
-        <div className="data"></div>
-        <Table className="table table-striped table-bordered"
-          data={projects}
-               sortable={true}
-               filterable={['name','lead']}
-        >
-        </Table>
+      <div>
+        <button className="btn" onClick={()=>this.setView('projects')}>Projects</button>
+        <button className="btn" onClick={()=>this.setView('users')}>Users</button>
+        {viewData}
       </div>
 
     );
