@@ -6,8 +6,9 @@ var Table = Reactable.Table,
 class App extends React.Component {
   constructor(props) {
     var state = {
-      dept:0,
-      data:false
+      dept:642,
+      projects:[],
+      focusedProjectData : false,
     };
     super(props);
     this.state = state;
@@ -36,7 +37,6 @@ class App extends React.Component {
   selectDept(e){
     let state = this.state;
     let newDept = parseInt(e.target.value);
-    console.log(newDept);
     if(state.dept !== newDept){
       this.fetchFreeProjects(newDept);
       state.dept = newDept;
@@ -45,8 +45,17 @@ class App extends React.Component {
   }
 
   showItem(link){
-
-
+    fetch("api/?request=getFocusedProject&project=" + link + '&dept=' + this.state.dept + '',{
+      method: "GET",
+    })
+      .then(function(response) {
+        return response.json()
+          .then(function(json){
+            let state  = this.state;
+            state.focusedProjectData = json.data;
+            this.setState(state);
+          }.bind(this))
+      }.bind(this));
 
   }
 
@@ -72,9 +81,8 @@ class App extends React.Component {
     let projects = this.state.projects;
     for(let i in projects){
       let link  = projects[i].link;
-      projects[i].name = <a onClick={(link) => {this.showItem(link)}}>{projects[i].name}</a>;
+      projects[i].name = <a onClick={() => {this.showItem(link)}}>{projects[i].name}</a>;
     }
-    console.log(this.state.projects);
 
     return (
       <div className="">

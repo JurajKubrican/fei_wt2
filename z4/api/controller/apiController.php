@@ -47,6 +47,9 @@ class ApiController{
     $data =[];
 
     switch ($requestType){
+      case 'getFocusedProject':
+        $data = $this->getFocusedProject($request);
+        break;
       case'getFreeProjects':
         $data = $this->getFreeProjects($request);
         break;
@@ -134,7 +137,24 @@ class ApiController{
 
   }
 
+  private function getFocusedProject($request){
 
+    $connector = new AISConnect();
+    $html = $connector->request('http://is.stuba.sk/pracoviste/prehled_temat.pl?detail=' . $request['project'] . ';pracoviste=' . $request['dept'] . ';lang=sk' );
+    $html = trim(preg_replace('/\s\s+/', ' ', $html));
+
+
+    $doc = new \DOMDocument();
+    libxml_use_internal_errors(true);
+    $doc->loadHTML($html);
+    $xPath = new \DOMXPath($doc);
+
+    $formTable = $xPath->query("(//div[@class='mainpage'])/table");
+
+
+    return $doc->saveHTML($formTable[0]);
+
+  }
 
 
 
