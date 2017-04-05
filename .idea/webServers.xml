@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="74a26240-d7b1-40c7-89d0-13c45ab5018c" name="WT_2" url="http://147.175.98.160">
+        <fileTransfer host="147.175.98.160" port="22" rootFolder="/home/xkubricanj/public_html" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
