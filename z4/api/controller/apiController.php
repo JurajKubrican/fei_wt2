@@ -115,7 +115,16 @@ class ApiController{
     return $data;
   }
 
-  private function getProjectsForPerson($request){
+  private function usersCmp($a, $b)
+  {
+      if ($a->sort == $b->sort) {
+          return 0;
+      }
+  return ($a->sort > $b->sort) ? -1 : 1;
+  }
+
+
+private function getProjectsForPerson($request){
 
     $this->getUserLdap($request['person']);
 
@@ -130,7 +139,7 @@ class ApiController{
 
     $connector = new AISConnect();
     $html = $connector->request('http://is.stuba.sk/lide/clovek.pl?lang=sk;zalozka=5;rok=1;id=' . $user );
-    var_dump('http://is.stuba.sk/lide/clovek.pl?lang=sk;zalozka=5;rok=1;id=' . $user);
+    //var_dump('http://is.stuba.sk/lide/clovek.pl?lang=sk;zalozka=5;rok=1;id=' . $user);
     $html = trim(preg_replace('/\s\s+/', ' ', $html));
 
 
@@ -144,13 +153,33 @@ class ApiController{
 
     $data = [];
     foreach($formTable as $row){
-      foreach($row->childNodes as $td){
-        var_dump($td->nodeValue);
+      $row->childNodes[1]->nodeValue;//name
 
+      if(strpos($row->childNodes[2]->nodeValue,'asopisoch')!== false ){
+        $type = 1;
+      }elseif(strpos($row->childNodes[2]->nodeValue,'onografie')!== false){
+        $type = 2;
+      }elseif(strpos($row->childNodes[2]->nodeValue,'kapitoly')!== false){
+        $type = 0;
+      }else{
+        continue;
       }
-      die;
+
+
+      $data[]=(object)[
+        'sort' => $type . $row->childNodes[3]->nodeValue,
+        'year' => $row->childNodes[3]->nodeValue,
+        'type' => $row->childNodes[2]->nodeValue,
+        'name' => $row->childNodes[1]->childNodes[0]->childNodes[0]->nodeValue
+      ];
+
     }
 
+
+    usort($data,[$this,'usersCmp']);
+      foreach ($data as $key => $item){
+        unset ($data[$key]->sort);
+      }
 
     return $data;
 

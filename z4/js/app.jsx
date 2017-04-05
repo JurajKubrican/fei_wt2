@@ -150,7 +150,7 @@ class App extends React.Component {
             <input type="text" value={this.state.userName} onChange={(e)=>this.setUserName(e)}/>
             <button className="btn" onClick={()=>this.fetchUser()} >Search</button>
             <Table className="table table-striped table-bordered"
-                   data={this.state.focusedProjectData} ></Table>
+                   data={this.state.userData}></Table>
           </div>);
         break;
     }

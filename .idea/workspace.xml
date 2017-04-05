@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42c30cd3-2c75-40df-8ae7-0b0e2033d511" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/z4/api/controller/AISConnect.php" afterPath="$PROJECT_DIR$/z4/api/controller/AISConnect.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/z4/api/controller/apiController.php" afterPath="$PROJECT_DIR$/z4/api/controller/apiController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/z4/js/app.jsx" afterPath="$PROJECT_DIR$/z4/js/app.jsx" />
     </list>
@@ -22,9 +21,11 @@
       <file leaf-file-name="apiController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/z4/api/controller/apiController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="147" column="32" lean-forward="false" selection-start-line="147" selection-start-column="32" selection-end-line="147" selection-end-column="32" />
-              <folding />
+            <state relative-caret-position="199">
+              <caret line="170" column="18" lean-forward="false" selection-start-line="170" selection-start-column="18" selection-end-line="170" selection-end-column="18" />
+              <folding>
+                <marker date="1491430199757" expanded="true" signature="3752:4021" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -241,8 +242,8 @@
       <file leaf-file-name="app.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/z4/js/app.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="150" column="43" lean-forward="false" selection-start-line="150" selection-start-column="43" selection-end-line="150" selection-end-column="43" />
+            <state relative-caret-position="327">
+              <caret line="152" column="45" lean-forward="false" selection-start-line="152" selection-start-column="45" selection-end-line="152" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -309,8 +310,8 @@
       <find>user</find>
       <find>focusedProjectData</find>
       <find>&lt;a</find>
-      <find>fetchUs</find>
       <find>getProjectsForPerson</find>
+      <find>fetchUs</find>
     </findStrings>
     <replaceStrings>
       <replace>data</replace>
@@ -364,8 +365,8 @@
         <option value="$PROJECT_DIR$/zap1/index.php" />
         <option value="$PROJECT_DIR$/z4/test.html" />
         <option value="$PROJECT_DIR$/z4/index.html" />
-        <option value="$PROJECT_DIR$/z4/js/app.jsx" />
         <option value="$PROJECT_DIR$/z4/api/controller/AISConnect.php" />
+        <option value="$PROJECT_DIR$/z4/js/app.jsx" />
         <option value="$PROJECT_DIR$/z4/api/controller/apiController.php" />
       </list>
     </option>
@@ -383,8 +384,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1616" />
-    <option name="height" value="876" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -657,22 +658,22 @@
       <workItem from="1491317566431" duration="2312000" />
       <workItem from="1491409171288" duration="24000" />
       <workItem from="1491409248430" duration="1034000" />
-      <workItem from="1491410452598" duration="7470000" />
+      <workItem from="1491410452598" duration="11039000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136810000" />
+    <option name="totallyTimeSpent" value="140379000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20437019" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16950959" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31897712" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2567714" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1187,14 +1188,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/z4/js/app.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="150" column="43" lean-forward="false" selection-start-line="150" selection-start-column="43" selection-end-line="150" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/z4/api/controller/AISConnect.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="251">
@@ -1203,11 +1196,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/z4/js/app.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="152" column="45" lean-forward="false" selection-start-line="152" selection-start-column="45" selection-end-line="152" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/z4/api/controller/apiController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="147" column="32" lean-forward="false" selection-start-line="147" selection-start-column="32" selection-end-line="147" selection-end-column="32" />
-          <folding />
+        <state relative-caret-position="199">
+          <caret line="170" column="18" lean-forward="false" selection-start-line="170" selection-start-column="18" selection-end-line="170" selection-end-column="18" />
+          <folding>
+            <marker date="1491430199757" expanded="true" signature="3752:4021" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
