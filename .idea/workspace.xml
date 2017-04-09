@@ -2,22 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42c30cd3-2c75-40df-8ae7-0b0e2033d511" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dictionaries/kubri.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/webServers.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/wt_2.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/z1/z1.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/z3/z3.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/z4/z4.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/z5/z4.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zap1/index.zip" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/z5/api/.htaccess" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/z5/api/controller/AISConnect.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/z5/api/controller/JDB.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/z5/api/controller/my-errors.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/z5/js/moment.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/z5/js/reactable.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/z5/test.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/z5/api/autoload.php" afterPath="$PROJECT_DIR$/z5/api/autoload.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/z5/api/controller/apiController.php" afterPath="$PROJECT_DIR$/z5/api/controller/apiController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/z5/index.html" afterPath="$PROJECT_DIR$/z5/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/z5/js/app.jsx" afterPath="$PROJECT_DIR$/z5/js/app.jsx" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,7 +27,68 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="apiController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/z5/api/controller/apiController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/z5/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/z5/js/app.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-400">
+              <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".htaccess" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/z5/api/.htaccess">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="18" lean-forward="false" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/z4/js/app.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="82" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="autoload.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/z5/api/autoload.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -44,13 +101,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>my-errors</find>
-      <find>attemp</find>
-      <find>onSignIn</find>
-      <find>oA</find>
-      <find>main.php</find>
-      <find>getUserFrom</find>
-      <find>date</find>
       <find>login-</find>
       <find>login</find>
       <find>register</find>
@@ -74,10 +124,18 @@
       <find>&lt;a</find>
       <find>fetchUs</find>
       <find>getProjectsForPerson</find>
+      <find>selectDep</find>
+      <find>U</find>
+      <find>UserN</find>
+      <find>UserNAme</find>
+      <find>ína</find>
+      <find>setuse</find>
+      <find>userName</find>
     </findStrings>
     <replaceStrings>
       <replace>data</replace>
       <replace>handleUpdate</replace>
+      <replace>ame</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\xampp\htdocs\wt_2</dir>
@@ -131,6 +189,14 @@
         <option value="$PROJECT_DIR$/z4/api/controller/apiController.php" />
         <option value="$PROJECT_DIR$/z4/js/app.jsx" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/z5/api/controller/JDB.php" />
+        <option value="$PROJECT_DIR$/z5/api/autoload.php" />
+        <option value="$PROJECT_DIR$/z5/api.php" />
+        <option value="$PROJECT_DIR$/z5/index.html" />
+        <option value="$PROJECT_DIR$/z5/js/app.jsx" />
+        <option value="$PROJECT_DIR$/z4/api/.htaccess" />
+        <option value="$PROJECT_DIR$/z5/api/.htaccess" />
+        <option value="$PROJECT_DIR$/z5/api/controller/apiController.php" />
       </list>
     </option>
   </component>
@@ -166,7 +232,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -207,9 +272,68 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wt_2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wt_2" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="z5" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wt_2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wt_2" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="z5" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wt_2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wt_2" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="z5" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -223,19 +347,19 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../feedbeo" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\wt_2\z4\api\controller" />
-      <recent name="C:\xampp\htdocs\wt_2\z3" />
-      <recent name="C:\xampp\htdocs\wt_2" />
-      <recent name="C:\xampp\htdocs\wt_2\z1" />
-      <recent name="C:\xampp\htdocs\wt_2\z1\api" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\wt_2\z5\js" />
       <recent name="C:\xampp\htdocs\wt_2" />
       <recent name="C:\xampp\htdocs\wt_2\z4" />
       <recent name="C:\xampp\htdocs\wt_2\" />
       <recent name="C:\xampp\htdocs\wt_2\z3" />
-      <recent name="C:\xampp\htdocs\wt_2\z3\js" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\wt_2\z5\api" />
+      <recent name="C:\xampp\htdocs\wt_2\z4\api\controller" />
+      <recent name="C:\xampp\htdocs\wt_2\z3" />
+      <recent name="C:\xampp\htdocs\wt_2" />
+      <recent name="C:\xampp\htdocs\wt_2\z1" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -367,34 +491,37 @@
       <workItem from="1491469906768" duration="38000" />
       <workItem from="1491503886168" duration="608000" />
       <workItem from="1491510633906" duration="767000" />
-      <workItem from="1491511429704" duration="167000" />
+      <workItem from="1491511429704" duration="420000" />
+      <workItem from="1491579273167" duration="23000" />
+      <workItem from="1491746745976" duration="4930000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145754000" />
+    <option name="totallyTimeSpent" value="150960000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21321961" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31852654" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21801706" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4073673" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32833788" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31852654" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4073673" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32833788" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -430,38 +557,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/z1/api/autoload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/z2/css/plugins/morris.css" />
-    <entry file="file://$PROJECT_DIR$/z2/js/app.jsx" />
-    <entry file="file://$PROJECT_DIR$/z2/api/config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="13" lean-forward="false" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/z2/api/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="26" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/z1.sql" />
-    <entry file="file://$USER_HOME$/Documents/NetBeansProjects/knet_project/knet.sk/web/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/composer.json" />
     <entry file="file://$PROJECT_DIR$/z2/vendor/firebase/php-jwt/src/JWT.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="199">
@@ -641,7 +736,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1649">
           <caret line="97" column="51" lean-forward="false" selection-start-line="97" selection-start-column="51" selection-end-line="97" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -649,7 +743,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -686,9 +779,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="170" column="18" lean-forward="false" selection-start-line="170" selection-start-column="18" selection-end-line="170" selection-end-column="18" />
-          <folding>
-            <marker date="1491430199757" expanded="true" signature="3752:4021" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -696,7 +786,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="28" column="6" lean-forward="false" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -704,204 +793,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="21" column="5" lean-forward="false" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-          <folding>
-            <element signature="e#143#149#0" expanded="true" />
-            <element signature="e#1426#1432#0" expanded="true" />
-            <element signature="e#1715#1721#0" expanded="true" />
-            <element signature="e#1757#1763#0" expanded="true" />
-            <element signature="e#1785#1791#0" expanded="true" />
-            <element signature="e#2142#2148#0" expanded="true" />
-            <element signature="e#2148#2154#0" expanded="true" />
-            <element signature="e#2154#2160#0" expanded="true" />
-            <element signature="e#2160#2166#0" expanded="true" />
-            <element signature="e#2166#2172#0" expanded="true" />
-            <element signature="e#2358#2364#0" expanded="true" />
-            <element signature="e#2364#2370#0" expanded="true" />
-            <element signature="e#2370#2376#0" expanded="true" />
-            <element signature="e#2376#2382#0" expanded="true" />
-            <element signature="e#2382#2388#0" expanded="true" />
-            <element signature="e#2576#2582#0" expanded="true" />
-            <element signature="e#2582#2588#0" expanded="true" />
-            <element signature="e#2588#2594#0" expanded="true" />
-            <element signature="e#2594#2600#0" expanded="true" />
-            <element signature="e#2600#2606#0" expanded="true" />
-            <element signature="e#2753#2759#0" expanded="true" />
-            <element signature="e#2759#2765#0" expanded="true" />
-            <element signature="e#2765#2771#0" expanded="true" />
-            <element signature="e#2771#2777#0" expanded="true" />
-            <element signature="e#2777#2783#0" expanded="true" />
-            <element signature="e#3006#3012#0" expanded="true" />
-            <element signature="e#3012#3018#0" expanded="true" />
-            <element signature="e#3018#3024#0" expanded="true" />
-            <element signature="e#3024#3030#0" expanded="true" />
-            <element signature="e#3030#3036#0" expanded="true" />
-            <element signature="e#3229#3235#0" expanded="true" />
-            <element signature="e#3235#3241#0" expanded="true" />
-            <element signature="e#3241#3247#0" expanded="true" />
-            <element signature="e#3247#3253#0" expanded="true" />
-            <element signature="e#3253#3259#0" expanded="true" />
-            <element signature="e#3451#3457#0" expanded="true" />
-            <element signature="e#3457#3463#0" expanded="true" />
-            <element signature="e#3463#3469#0" expanded="true" />
-            <element signature="e#3469#3475#0" expanded="true" />
-            <element signature="e#3475#3481#0" expanded="true" />
-            <element signature="e#6600#6606#0" expanded="true" />
-            <element signature="e#6726#6732#0" expanded="true" />
-            <element signature="e#6827#6833#0" expanded="true" />
-            <element signature="e#7817#7823#0" expanded="true" />
-            <element signature="e#8935#8941#0" expanded="true" />
-            <element signature="e#9062#9068#0" expanded="true" />
-            <element signature="e#9091#9097#0" expanded="true" />
-            <element signature="e#9218#9224#0" expanded="true" />
-            <element signature="e#9246#9252#0" expanded="true" />
-            <element signature="e#10379#10385#0" expanded="true" />
-            <element signature="e#10494#10500#0" expanded="true" />
-            <element signature="e#10522#10528#0" expanded="true" />
-            <element signature="e#11532#11538#0" expanded="true" />
-            <element signature="e#11621#11627#0" expanded="true" />
-            <element signature="e#12675#12681#0" expanded="true" />
-            <element signature="e#12788#12794#0" expanded="true" />
-            <element signature="e#12816#12822#0" expanded="true" />
-            <element signature="e#13840#13846#0" expanded="true" />
-            <element signature="e#13953#13959#0" expanded="true" />
-            <element signature="e#13981#13987#0" expanded="true" />
-            <element signature="e#15173#15179#0" expanded="true" />
-            <element signature="e#15288#15294#0" expanded="true" />
-            <element signature="e#15316#15322#0" expanded="true" />
-            <element signature="e#16402#16408#0" expanded="true" />
-            <element signature="e#16491#16497#0" expanded="true" />
-            <element signature="e#17462#17468#0" expanded="true" />
-            <element signature="e#18488#18494#0" expanded="true" />
-            <element signature="e#19517#19523#0" expanded="true" />
-            <element signature="e#20633#20639#0" expanded="true" />
-            <element signature="e#21809#21815#0" expanded="true" />
-            <element signature="e#21941#21947#0" expanded="true" />
-            <element signature="e#21969#21975#0" expanded="true" />
-            <element signature="e#23033#23039#0" expanded="true" />
-            <element signature="e#23148#23154#0" expanded="true" />
-            <element signature="e#23176#23182#0" expanded="true" />
-            <element signature="e#24191#24197#0" expanded="true" />
-            <element signature="e#24983#24989#0" expanded="true" />
-            <element signature="e#25178#25184#0" expanded="true" />
-            <element signature="e#25234#25240#0" expanded="true" />
-            <element signature="e#26483#26489#0" expanded="true" />
-            <element signature="e#26598#26604#0" expanded="true" />
-            <element signature="e#26626#26632#0" expanded="true" />
-            <element signature="e#27661#27667#0" expanded="true" />
-            <element signature="e#27763#27769#0" expanded="true" />
-            <element signature="e#28832#28838#0" expanded="true" />
-            <element signature="e#28867#28873#0" expanded="true" />
-            <element signature="e#28982#28988#0" expanded="true" />
-            <element signature="e#29010#29016#0" expanded="true" />
-            <element signature="e#30161#30167#0" expanded="true" />
-            <element signature="e#30276#30282#0" expanded="true" />
-            <element signature="e#30304#30310#0" expanded="true" />
-            <element signature="e#31318#31324#0" expanded="true" />
-            <element signature="e#32365#32371#0" expanded="true" />
-            <element signature="e#33551#33557#0" expanded="true" />
-            <element signature="e#33666#33672#0" expanded="true" />
-            <element signature="e#33694#33700#0" expanded="true" />
-            <element signature="e#34874#34880#0" expanded="true" />
-            <element signature="e#34989#34995#0" expanded="true" />
-            <element signature="e#35017#35023#0" expanded="true" />
-            <element signature="e#36169#36175#0" expanded="true" />
-            <element signature="e#36260#36266#0" expanded="true" />
-            <element signature="e#36288#36294#0" expanded="true" />
-            <element signature="e#37361#37367#0" expanded="true" />
-            <element signature="e#37476#37482#0" expanded="true" />
-            <element signature="e#37504#37510#0" expanded="true" />
-            <element signature="e#38508#38514#0" expanded="true" />
-            <element signature="e#39556#39562#0" expanded="true" />
-            <element signature="e#40585#40591#0" expanded="true" />
-            <element signature="e#41760#41766#0" expanded="true" />
-            <element signature="e#41875#41881#0" expanded="true" />
-            <element signature="e#41903#41909#0" expanded="true" />
-            <element signature="e#42900#42906#0" expanded="true" />
-            <element signature="e#43982#43988#0" expanded="true" />
-            <element signature="e#45128#45134#0" expanded="true" />
-            <element signature="e#45260#45266#0" expanded="true" />
-            <element signature="e#45288#45294#0" expanded="true" />
-            <element signature="e#46534#46540#0" expanded="true" />
-            <element signature="e#46649#46655#0" expanded="true" />
-            <element signature="e#46677#46683#0" expanded="true" />
-            <element signature="e#47733#47739#0" expanded="true" />
-            <element signature="e#47848#47854#0" expanded="true" />
-            <element signature="e#47876#47882#0" expanded="true" />
-            <element signature="e#48951#48957#0" expanded="true" />
-            <element signature="e#50135#50141#0" expanded="true" />
-            <element signature="e#50262#50268#0" expanded="true" />
-            <element signature="e#50291#50297#0" expanded="true" />
-            <element signature="e#50418#50424#0" expanded="true" />
-            <element signature="e#50446#50452#0" expanded="true" />
-            <element signature="e#51440#51446#0" expanded="true" />
-            <element signature="e#52665#52671#0" expanded="true" />
-            <element signature="e#52778#52784#0" expanded="true" />
-            <element signature="e#52806#52812#0" expanded="true" />
-            <element signature="e#53947#53953#0" expanded="true" />
-            <element signature="e#54062#54068#0" expanded="true" />
-            <element signature="e#54090#54096#0" expanded="true" />
-            <element signature="e#55233#55239#0" expanded="true" />
-            <element signature="e#55365#55371#0" expanded="true" />
-            <element signature="e#55393#55399#0" expanded="true" />
-            <element signature="e#56474#56480#0" expanded="true" />
-            <element signature="e#56561#56567#0" expanded="true" />
-            <element signature="e#57555#57561#0" expanded="true" />
-            <element signature="e#58358#58364#0" expanded="true" />
-            <element signature="e#58565#58571#0" expanded="true" />
-            <element signature="e#58643#58649#0" expanded="true" />
-            <element signature="e#59448#59454#0" expanded="true" />
-            <element signature="e#59648#59654#0" expanded="true" />
-            <element signature="e#59727#59733#0" expanded="true" />
-            <element signature="e#61205#61211#0" expanded="true" />
-            <element signature="e#61320#61326#0" expanded="true" />
-            <element signature="e#61348#61354#0" expanded="true" />
-            <element signature="e#62375#62381#0" expanded="true" />
-            <element signature="e#63490#63496#0" expanded="true" />
-            <element signature="e#64509#64515#0" expanded="true" />
-            <element signature="e#64598#64604#0" expanded="true" />
-            <element signature="e#65327#65333#0" expanded="true" />
-            <element signature="e#65548#65554#0" expanded="true" />
-            <element signature="e#65642#65648#0" expanded="true" />
-            <element signature="e#66448#66454#0" expanded="true" />
-            <element signature="e#66659#66665#0" expanded="true" />
-            <element signature="e#66725#66731#0" expanded="true" />
-            <element signature="e#67794#67800#0" expanded="true" />
-            <element signature="e#68606#68612#0" expanded="true" />
-            <element signature="e#68812#68818#0" expanded="true" />
-            <element signature="e#68886#68892#0" expanded="true" />
-            <element signature="e#69713#69719#0" expanded="true" />
-            <element signature="e#69977#69983#0" expanded="true" />
-            <element signature="e#70093#70099#0" expanded="true" />
-            <element signature="e#71278#71284#0" expanded="true" />
-            <element signature="e#71395#71401#0" expanded="true" />
-            <element signature="e#71423#71429#0" expanded="true" />
-            <element signature="e#72456#72462#0" expanded="true" />
-            <element signature="e#73518#73524#0" expanded="true" />
-            <element signature="e#74656#74662#0" expanded="true" />
-            <element signature="e#75619#75625#0" expanded="true" />
-            <element signature="e#75739#75745#0" expanded="true" />
-            <element signature="e#75760#75766#0" expanded="true" />
-            <element signature="e#75875#75881#0" expanded="true" />
-            <element signature="e#75903#75909#0" expanded="true" />
-            <element signature="e#76976#76982#0" expanded="true" />
-            <element signature="e#78017#78023#0" expanded="true" />
-            <element signature="e#79305#79311#0" expanded="true" />
-            <element signature="e#79394#79400#0" expanded="true" />
-            <element signature="e#80478#80484#0" expanded="true" />
-            <element signature="e#80591#80597#0" expanded="true" />
-            <element signature="e#80619#80625#0" expanded="true" />
-            <element signature="e#81653#81659#0" expanded="true" />
-            <element signature="e#82733#82739#0" expanded="true" />
-            <element signature="e#82822#82828#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/z4/js/app.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="140" column="12" lean-forward="false" selection-start-line="140" selection-start-column="12" selection-end-line="140" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -913,10 +804,75 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/z5/api/controller/JDB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/z5/api/autoload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/z5/api.php" />
+    <entry file="file://$PROJECT_DIR$/z5/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/z5/meniny.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="867" column="25" lean-forward="false" selection-start-line="867" selection-start-column="22" selection-end-line="867" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/z4/js/app.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="82" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/z5/js/app.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-400">
+          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/z5/api/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="18" lean-forward="false" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/z5/test.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/z5/api/controller/apiController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
