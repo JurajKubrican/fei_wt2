@@ -1,4 +1,3 @@
-
 class App extends React.Component {
   constructor(props) {
     var state = {
@@ -7,6 +6,7 @@ class App extends React.Component {
       date:'0424',
       type:'sviatky',
       date2:"",
+      data:{},
     };
     super(props);
     this.state = state;
@@ -32,24 +32,24 @@ class App extends React.Component {
 
 
 
-  fetch(url,method){
+  fetch(url,method,data){
     let state  = this.state;
     state.request = url;
-    state.status = 'pending',
-    this.setState(state);
+    state.status = 'pending';
+      this.setState(state);
 
 
     fetch(url,{
       method: method,
+      body:JSON.stringify(data)
     })
       .then(function(response) {
         console.log(response);
         return response.json()
           .then(function(json){
             let state  = this.state;
-            state.focusedProjectData = json.data;
-            state.view = 'projectsFocused',
-              this.setState(state);
+            state.data = json.data;
+            this.setState(state);
           }.bind(this))
       }.bind(this));
   }
@@ -59,6 +59,20 @@ class App extends React.Component {
     let val = e.target.value;
     state[name] = val;
     this.setState(state);
+  }
+
+  setEditableVal(e,i,j){
+    let state = this.state;
+    let val = e.target.value;
+    state.data[i][j] = val;
+    this.setState(state);
+  }
+
+  saveEditable(i){
+
+    let request = 'api/stat/' + this.state.country + '/meniny/' + this.state.data[i].den;
+    this.fetch(request,'PATCH',this.state.data[i]);
+
   }
 
 
@@ -90,6 +104,29 @@ class App extends React.Component {
       itemsTypes.push(<option key={val.id} value={val.id}>{val.name}</option>)
     }
 
+
+    let editable = [];
+    for(let i in this.state.data){
+      let itemsEditable=[];
+      for(let j in this.state.data[i]){
+        let val = this.state.data[i][j];
+        // if(typeof(val) === 'object'){
+        //   val = val.join(', ');
+        // }
+        itemsEditable.push(<tr key={j}><td key="1">{j}</td><td key="2"><input type="text" value={val} onChange={(e)=>this.setEditableVal(e,i,j)}/></td></tr>);
+      }
+
+
+      editable.push(<table key={i}>
+        <tbody>
+        {itemsEditable}
+        <tr key="submit"><td key="1"></td><td key="2"><button onClick={(e)=>this.saveEditable(i)}>submit</button></td></tr>
+        </tbody>
+      </table>)
+    }
+
+
+
     return (
       <div>
         <div>
@@ -111,6 +148,7 @@ class App extends React.Component {
             <input type="text" value={this.state.date2} onChange={(e)=>this.setVal(e,'date2')}/>
             <button className="btn" onClick={()=>this.fetchByType()} >Search</button>
           </formgroup>
+          {editable}
         </div>
       </div>
 

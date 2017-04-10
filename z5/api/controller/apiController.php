@@ -54,7 +54,14 @@ class ApiController{
       case 'GET':
         $data = $this->get($filter);
         break;
-      case 'POST':
+      case 'PUT':
+        $putfp = fopen('php://input', 'r');
+        $putdata = '';
+        while($data = fread($putfp, 1024))
+          $putdata .= $data;
+        fclose($putfp);
+
+        $data = $this->put($filter,$putdata);
         break;
     }
 
@@ -124,14 +131,15 @@ class ApiController{
       $partial = (object)[];
       foreach($fields as $field){
         if(isset($item->$field)) {
-          if ($field === 'den') {
+//          if ($field === 'den') {
             $partial->$field = (string)$item->$field;
-          } else {
-            $partial->$field = explode(', ', $item->$field);
-          }
+//          } else {
+//            $partial->$field = explode(', ', $item->$field);
+//          }
 
           if ($field === 'SK' && isset($item->SKd)) {
-            $partial->SK += explode(', ', (string)$item->SKd);
+//            $partial->SKd = explode(', ', (string)$item->SKd);
+            $partial->SKd = (string)$item->SKd;
           }
         }
       }
@@ -145,6 +153,31 @@ class ApiController{
 
 
     return $result;
+  }
+
+
+  private function put($filter,$data){
+    $data = \json_decode($data);
+    $stat = isset($filter['stat']) ? trim($filter['stat']) : 'SK' ;
+
+    $xml = new \SimpleXMLElement(file_get_contents('../meniny.xml'));
+
+    $item=false;
+    foreach($xml as $item) {
+
+      if ($filter['meniny'] !== (string)$item->den)
+        continue;
+
+      foreach ($data as $key => $val) {
+        $item->$key = $val;
+      }
+      break;
+
+    }
+
+    $xml->asXML('../meniny.xml');
+
+    return [];
   }
 
 
