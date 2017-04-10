@@ -3,29 +3,30 @@ class App extends React.Component {
   constructor(props) {
     var state = {
       country:"SK",
-      name:"",
-      date:'',
+      name:"juraj",
+      date:'0424',
+      type:'sviatky',
+      date2:"",
     };
     super(props);
     this.state = state;
   }
 
   fetchByName(){
-    let country = this.state.country === 'all' ? '' : ('&country=' + this.state.country)
-    let request = 'api/namesday?name=' + this.state.name;
+    let request = 'api/stat/' + this.state.country + '/meno/' + this.state.name;
     this.fetch(request,'GET');
   }
 
   fetchByDate(){
-    let country = this.state.country === 'all' ? '' : ('&country=' + this.state.country)
-    let request = 'api/namesday?date=' + this.state.date;
+    let date = this.state.date;
+    console.log(date);
+    let request = 'api/stat/' + this.state.country + '/meniny/' + date;
     this.fetch(request,'GET');
 
   }
 
   fetchByType(){
-    let country = this.state.country === 'all' ? '' : ('&country=' + this.state.country)
-    let request = 'api/namesday?date=' + this.state.date;
+    let request = 'api/stat/' + this.state.country + '/' + this.state.type +'/' + this.state.date2;
     this.fetch(request,'GET');
   }
 
@@ -65,7 +66,6 @@ class App extends React.Component {
   render() {
 
     const countries = [
-      {name:"all",id:"ALL"},
       {name:"Slovensko",id:"SK"},
       {name:"Ceska republika",id:"CZ"},
       {name:"Rakusko",id:"AT"},
@@ -80,7 +80,6 @@ class App extends React.Component {
     }
 
     const types = [
-      {name:"all",id:"all"},
       {name:"Sviatky",id:"sviatky"},
       {name:"Dni",id:"dni"},
     ];
@@ -96,19 +95,20 @@ class App extends React.Component {
         <div>
           <h1>Namesday</h1>
           <formgroup>
-            <select onChange={(e)=>{this.setVal(e,'country')}}>{items}</select>
+            <select value={this.state.country} onChange={(e)=>{this.setVal(e,'country')}}>{items}</select>
             <input type="text" value={this.state.name} onChange={(e)=>this.setVal(e,'name')}/>
             <button className="btn" onClick={()=>this.fetchByName()} >Search</button>
           </formgroup><br/>
           <formgroup>
-            <select onChange={(e)=>{this.setVal(e,'country')}}>{items}</select>
-            <input type="date" value={this.state.date} onChange={(e)=>this.setVal(e,'date')}/>
+            <select value={this.state.country} onChange={(e)=>{this.setVal(e,'country')}}>{items}</select>
+            <input type="text" value={this.state.date} onChange={(e)=>this.setVal(e,'date')}/>
             <button className="btn" onClick={()=>this.fetchByDate()} >Search</button>
           </formgroup>
           <h1>Holidays</h1>
           <formgroup>
-            <select onChange={(e)=>{this.setVal(e,'country')}}>{items}</select>
-            <select onChange={(e)=>{this.setVal(e,'type')}}>{itemsTypes}</select>
+            <select value={this.state.country} onChange={(e)=>{this.setVal(e,'country')}}>{items}</select>
+            <select value={this.state.type} onChange={(e)=>{this.setVal(e,'type')}}>{itemsTypes}</select>
+            <input type="text" value={this.state.date2} onChange={(e)=>this.setVal(e,'date2')}/>
             <button className="btn" onClick={()=>this.fetchByType()} >Search</button>
           </formgroup>
         </div>

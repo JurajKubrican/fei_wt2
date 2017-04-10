@@ -15,4 +15,4 @@ require_once 'autoload.php';
 
 $apiController = new wt\ApiController();
 
-$apiController->run($_REQUEST);
+$apiController->run();

@@ -37,33 +37,116 @@ class ApiController{
   /**
    * @param $request
    */
-  public function run($request){
-    if(empty($request['request'])){
-      $this->error('missing_request');
+  public function run(){
+
+    $URI = explode('/',explode('?',str_replace('/z5/api/','',$_SERVER['REQUEST_URI']))[0]);
+    $filter = [];
+    foreach ($URI as $key => $item){
+      if($key % 2 === 0 ){
+        $filter[$item] = isset($URI[$key + 1]) ? $URI[$key + 1] : '';
+      }
     }
+    $filter += $_GET;
 
-    $requestType = $request['request'];
-    unset($request['request']);
-    $data =[];
+    $METHOD = $_SERVER['REQUEST_METHOD'];
 
-    switch ($requestType){
-      case 'getFocusedProject':
-        $data = $this->getFocusedProject($request);
+    switch ($METHOD){
+      case 'GET':
+        $data = $this->get($filter);
         break;
-      case'getFreeProjects':
-        $data = $this->getFreeProjects($request);
-        break;
-      case'getProjectsForPerson':
-        $data = $this->getProjectsForPerson($request);
-        break;
-      default:
-        $this->error('wrong_request_type:' . $requestType);
+      case 'POST':
         break;
     }
 
     $this->formulateResponse($data);
 
   }
+
+
+  private function get($filter){
+
+    $stat = isset($filter['stat']) ? trim($filter['stat']) : 'SK' ;
+    $fields = ['den'];
+
+    $conds = [];
+    if( isset($filter['sviatky']) ){
+      $fields[] = $stat . 'sviatky';
+      if(!empty($filter['sviatky'])){
+        $conds['den'] = $filter['sviatky'];
+      }
+    }elseif( isset($filter['meniny']) ){
+      $fields[] = $stat . '';
+      if(!empty($filter['meniny'])){
+        $conds['den'] = $filter['meniny'];
+      }
+    }elseif( isset($filter['dni']) ){
+      $fields[] = $stat . 'dni';
+      if(!empty($filter['dni'])){
+        $conds['den'] = $filter['dni'];
+      }
+    }elseif( isset($filter['meno']) ){
+      $fields[] = $stat . '';
+      if(!empty($filter['meno'])){
+        $conds['meno'] = $filter['meno'];
+      }
+    }
+
+
+
+    $xml = new \SimpleXMLElement(file_get_contents('../meniny.xml'));
+
+    $result = [];
+
+    foreach($xml as $item){
+      $continue = false;
+      foreach($conds as $key => $cond){
+        if($key === 'meno' ){
+
+
+          if( strpos(strtolower($item->{$stat}), strtolower($cond)) !== false
+            ||  isset($item->{$stat.'d'})
+            && strpos(strtolower($item->{$stat.'d'}), strtolower($cond)) !== false ){
+            continue;
+          }else{
+            $continue = true;
+          }
+
+        }
+        if(!isset($item->$key) || (string)$item->$key !== $cond){
+          $continue = true;
+          break;
+        }
+      }
+      if($continue)
+        continue;
+
+
+      $partial = (object)[];
+      foreach($fields as $field){
+        if(isset($item->$field)) {
+          if ($field === 'den') {
+            $partial->$field = (string)$item->$field;
+          } else {
+            $partial->$field = explode(', ', $item->$field);
+          }
+
+          if ($field === 'SK' && isset($item->SKd)) {
+            $partial->SK += explode(', ', (string)$item->SKd);
+          }
+        }
+      }
+
+      if(count((array)$partial)){
+        $result[] = $partial;
+      }
+
+
+    }
+
+
+    return $result;
+  }
+
 
 
   /**
