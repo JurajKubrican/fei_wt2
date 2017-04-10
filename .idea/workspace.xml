@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42c30cd3-2c75-40df-8ae7-0b0e2033d511" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/z5/api/autoload.php" afterPath="$PROJECT_DIR$/z5/api/autoload.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/z5/api/controller/apiController.php" afterPath="$PROJECT_DIR$/z5/api/controller/apiController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/z5/api/index.php" afterPath="$PROJECT_DIR$/z5/api/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/z5/js/app.jsx" afterPath="$PROJECT_DIR$/z5/js/app.jsx" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,11 +21,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="apiController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="apiController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/z5/api/controller/apiController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="190">
               <caret line="126" column="0" lean-forward="false" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="19" lean-forward="true" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -87,7 +94,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>register</find>
       <find>Meno</find>
       <find>auth</find>
       <find>logout</find>
@@ -117,6 +123,7 @@
       <find>userName</find>
       <find>eva</find>
       <find>&lt;SKd&gt;</find>
+      <find>$result</find>
     </findStrings>
     <replaceStrings>
       <replace>data</replace>
@@ -174,7 +181,6 @@
         <option value="$PROJECT_DIR$/z4/api/controller/AISConnect.php" />
         <option value="$PROJECT_DIR$/z4/api/controller/apiController.php" />
         <option value="$PROJECT_DIR$/z4/js/app.jsx" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/z5/api/controller/JDB.php" />
         <option value="$PROJECT_DIR$/z5/api.php" />
         <option value="$PROJECT_DIR$/z5/index.html" />
@@ -184,6 +190,7 @@
         <option value="$PROJECT_DIR$/z5/api/index.php" />
         <option value="$PROJECT_DIR$/z5/js/app.jsx" />
         <option value="$PROJECT_DIR$/z5/api/controller/apiController.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -481,12 +488,12 @@
       <workItem from="1491511429704" duration="420000" />
       <workItem from="1491579273167" duration="23000" />
       <workItem from="1491746745976" duration="5555000" />
-      <workItem from="1491820474880" duration="13289000" />
+      <workItem from="1491820474880" duration="13496000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="164874000" />
+    <option name="totallyTimeSpent" value="165081000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -748,13 +755,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/z4/api/controller/AISConnect.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -848,6 +848,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="126" column="0" lean-forward="false" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="19" lean-forward="true" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
           <folding />
         </state>
       </provider>
