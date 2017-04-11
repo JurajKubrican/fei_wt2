@@ -113,7 +113,7 @@ class App extends React.Component {
         // if(typeof(val) === 'object'){
         //   val = val.join(', ');
         // }
-        itemsEditable.push(<tr key={j}><td key="1">{j}</td><td key="2"><input type="text" value={val} onChange={(e)=>this.setEditableVal(e,i,j)}/></td></tr>);
+        itemsEditable.push(<tr key={j}><td key="1">{j}</td><td key="2"><input className="form-control" type="text" value={val} onChange={(e)=>this.setEditableVal(e,i,j)}/></td></tr>);
       }
 
 
@@ -129,24 +129,24 @@ class App extends React.Component {
 
     return (
       <div>
-        <div>
+        <div className="form-inline">
           <h1>Namesday</h1>
           <formgroup>
-            <select value={this.state.country} onChange={(e)=>{this.setVal(e,'country')}}>{items}</select>
-            <input type="text" value={this.state.name} onChange={(e)=>this.setVal(e,'name')}/>
+            <select className="form-control " value={this.state.country} onChange={(e)=>{this.setVal(e,'country')}}>{items}</select>
+            <input className="form-control" type="text" value={this.state.name} onChange={(e)=>this.setVal(e,'name')}/>
             <button className="btn" onClick={()=>this.fetchByName()} >Search</button>
           </formgroup><br/>
           <formgroup>
-            <select value={this.state.country} onChange={(e)=>{this.setVal(e,'country')}}>{items}</select>
-            <input type="text" value={this.state.date} onChange={(e)=>this.setVal(e,'date')}/>
+            <select className="form-control" value={this.state.country} onChange={(e)=>{this.setVal(e,'country')}}>{items}</select>
+            <input className="form-control" type="text" value={this.state.date} onChange={(e)=>this.setVal(e,'date')}/>
             <button className="btn" onClick={()=>this.fetchByDate()} >Search</button>
           </formgroup>
           <h1>Holidays</h1>
           <formgroup>
-            <select value={this.state.country} onChange={(e)=>{this.setVal(e,'country')}}>{items}</select>
-            <select value={this.state.type} onChange={(e)=>{this.setVal(e,'type')}}>{itemsTypes}</select>
-            <input type="text" value={this.state.date2} onChange={(e)=>this.setVal(e,'date2')}/>
-            <button className="btn" onClick={()=>this.fetchByType()} >Search</button>
+            <select className="form-control" value={this.state.country} onChange={(e)=>{this.setVal(e,'country')}}>{items}</select>
+            <select className="form-control" value={this.state.type} onChange={(e)=>{this.setVal(e,'type')}}>{itemsTypes}</select>
+            <input className="form-control" type="text" value={this.state.date2} onChange={(e)=>this.setVal(e,'date2')}/>
+            <button className="form-control btn" onClick={()=>this.fetchByType()} >Search</button>
           </formgroup>
           {editable}
         </div>

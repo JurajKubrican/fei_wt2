@@ -129,8 +129,9 @@ class ApiController{
 
 
       $partial = (object)[];
+     // var_dump($fields);
       foreach($fields as $field){
-        if(isset($item->$field)) {
+        if(!empty($item->$field)) {
 //          if ($field === 'den') {
             $partial->$field = (string)$item->$field;
 //          } else {
@@ -144,7 +145,7 @@ class ApiController{
         }
       }
 
-      if(count((array)$partial)){
+      if(count((array)$partial) > 1){
         $result[] = $partial;
       }
 
@@ -162,7 +163,7 @@ class ApiController{
 
     $xml = new \SimpleXMLElement(file_get_contents('../meniny.xml'));
 
-    $item=false;
+    $item = false;
     foreach($xml as $item) {
 
       if ($filter['meniny'] !== (string)$item->den)
