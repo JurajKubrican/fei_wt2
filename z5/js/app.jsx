@@ -71,7 +71,7 @@ class App extends React.Component {
   saveEditable(i){
 
     let request = 'api/stat/' + this.state.country + '/meniny/' + this.state.data[i].den;
-    this.fetch(request,'PATCH',this.state.data[i]);
+    this.fetch(request,'PUT',this.state.data[i]);
 
   }
 

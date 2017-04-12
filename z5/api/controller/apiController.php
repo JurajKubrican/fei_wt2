@@ -163,14 +163,13 @@ class ApiController{
 
     $xml = new \SimpleXMLElement(file_get_contents('../meniny.xml'));
 
-    $item = false;
-    foreach($xml as $item) {
+    foreach($xml as $index => $item) {
 
       if ($filter['meniny'] !== (string)$item->den)
         continue;
 
       foreach ($data as $key => $val) {
-        $item->$key = $val;
+        $xml[$index]->$key = $val;
       }
       break;
 
