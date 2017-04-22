@@ -169,7 +169,7 @@ class ApiController{
         continue;
 
       foreach ($data as $key => $val) {
-        $xml[$index]->$key = $val;
+        $item->$key = $val;
       }
       break;
 

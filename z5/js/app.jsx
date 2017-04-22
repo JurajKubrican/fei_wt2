@@ -36,7 +36,7 @@ class App extends React.Component {
     let state  = this.state;
     state.request = url;
     state.status = 'pending';
-      this.setState(state);
+    this.setState(state);
 
 
     fetch(url,{
@@ -44,7 +44,6 @@ class App extends React.Component {
       body:JSON.stringify(data)
     })
       .then(function(response) {
-        console.log(response);
         return response.json()
           .then(function(json){
             let state  = this.state;
