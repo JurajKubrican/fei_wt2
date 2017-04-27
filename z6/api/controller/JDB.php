@@ -10,11 +10,13 @@ class Jdb {
     $this->link = mysqli_connect($host, $user, $password, $db, 0, $socket) or print("Error " . mysqli_error($this->link));
 
     if ($this->link->connect_errno > 0) {
+
       die('DB_ERROR [' . $this->link->connect_error . ']');
     }
 
     if (!$this->link) {
       var_dump($this->link->error);
+      //debug_backtrace ();
       die("DB_ERROR:" . mysqli_error($this->link));
     }
 
@@ -27,6 +29,7 @@ class Jdb {
 
 
     if (!$result = $this->link->query($sQuery)) {
+//      var_dump( debug_backtrace ());
       die('DB_ERROR [' . $this->link->error . ']' . ' STMT :' . $sQuery);
     }
 
@@ -94,12 +97,11 @@ class Jdb {
       $sCond .= '`' . $key . '` = "' . $value . '" AND';
     }
     $aRow = $this->getRow(substr($sStmt . $sCond, 0, -3));
-    //var_dump(substr($sStmt . $sCond, 0, -3), $aRow);
     if ($aRow['count'] > 0) {
       //UPDATE
       $sStmt = 'UPDATE `' . $sTable . '` SET ';
       foreach ($aData as $key => $value) {
-        $sStmt .= ' `' . $key . '` = "' . $value . '",';
+        $sStmt .= ' `' . $key . '` = "' . addslashes($value) . '",';
       }
       $sStmt = substr($sStmt, 0, -1) . ' WHERE ' . $sCond;
       //var_dump(substr( $sStmt ,0,-3));
@@ -111,12 +113,18 @@ class Jdb {
       foreach ($aData as $key => $value)
         $aData[$key] = "'$aData[$key]'";
       $sStmt = 'INSERT INTO `' . $sTable . '` (' . implode(array_keys($aData), ' ,') . ') VALUES (' . implode(array_values($aData), ' ,') . ') ';
+
       $this->getResult($sStmt);
     }
 
     return $aRow;
   }
 
+  /**
+   * @param $sTable
+   * @param $aData
+   * @return bool|mysqli_result
+   */
   public function insert($sTable, $aData){
     foreach ($aData as $key => $value)
       $aData[$key] = "'$aData[$key]'";

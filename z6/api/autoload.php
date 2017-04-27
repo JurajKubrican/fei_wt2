@@ -6,7 +6,7 @@ if (!defined('APP_VALID'))
 
 require_once 'controller/JDB.php';
 require_once 'controller/apiController.php';
-require_once 'controller/AISConnect.php';
+//require_once 'controller/AISConnect.php';
 
 //require_once '../vendor/autoload.php';
 
