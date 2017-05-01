@@ -174,7 +174,10 @@ class ApiController{
     $geoip = $this->geoIP($_SERVER['REMOTE_ADDR']);
     $this->track('geoip',$geoip);
 
-    return [$this->geoIP($_SERVER['REMOTE_ADDR'])];
+    $flag = json_decode($this->request('https://restcountries.eu/rest/v2/name/' . rawurlencode($geoip->country)));
+    $geoip->flag = $flag[0]->flag;
+
+    return [$geoip];
 
   }
 

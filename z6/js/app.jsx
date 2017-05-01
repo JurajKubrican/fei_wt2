@@ -62,8 +62,11 @@ class App extends React.Component {
         delete(link.filter);
         let key = link.key;
         data[i].key = <a onClick={() => {this.showItem(key)}}>{key}</a>;
-      }
 
+      }
+      if(link.flag){
+        link.flag = (<img src={link.flag} style={{height:'20px'}} alt="flag"/>);
+      }
 
     }
 
